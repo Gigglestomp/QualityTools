@@ -1,0 +1,24 @@
+{
+  "item.qualitytools.wood_hammer": "Wood Hammer",
+  "item.qualitytools.gold_hammer": "Gold Hammer",
+  "item.qualitytools.copper_hammer": "Copper Hammer",
+  "item.qualitytools.iron_hammer": "Iron Hammer",
+  "item.qualitytools.quartz_hammer": "Quartz Hammer",
+  "item.qualitytools.emerald_hammer": "Emerald Hammer",
+  "item.qualitytools.amethyst_hammer": "Amethyst Hammer",
+  "item.qualitytools.diamond_hammer": "Diamond Hammer",
+  "item.qualitytools.netherite_hammer": "Netherite Hammer",
+  "item.qualitytools.wood_excavator": "Wood Excavator",
+  "item.qualitytools.gold_excavator": "Gold Excavator",
+  "item.qualitytools.copper_excavator": "Copper Excavator",
+  "item.qualitytools.iron_excavator": "Iron Excavator",
+  "item.qualitytools.quartz_excavator": "Quartz Excavator",
+  "item.qualitytools.emerald_excavator": "Emerald Excavator",
+  "item.qualitytools.amethyst_excavator": "Amethyst Excavator",
+  "item.qualitytools.diamond_excavator": "Diamond Excavator",
+  "item.qualitytools.netherite_excavator": "Netherite Excavator",
+
+  "itemgroup.qualitytools.quality_tools_items": "QualityTools Items",
+  "itemgroup.qualitytools.quality_tools_blocks": "QualityTools Blocks"
+
+}
