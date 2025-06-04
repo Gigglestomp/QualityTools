@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "horse_body": [
+      {
+        "texture": "qualitytools:copper"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "qualitytools:copper"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "qualitytools:copper"
+      }
+    ]
+  }
+}

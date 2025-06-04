@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "horse_body": [
+      {
+        "texture": "qualitytools:amethyst"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "qualitytools:amethyst"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "qualitytools:amethyst"
+      }
+    ]
+  }
+}
