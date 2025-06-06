@@ -4,6 +4,7 @@ import net.dungeondesk.qualitytools.item.custom.ExcavatorItem;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -21,7 +22,7 @@ public class ExcavatorUsageEvent implements PlayerBlockBreakEvents.Before{
     public boolean beforeBlockBreak(World world, PlayerEntity player, BlockPos pos, BlockState blockState, @Nullable BlockEntity blockEntity) {
         ItemStack mainHandItem = player.getMainHandStack();
 
-        if(mainHandItem.getItem() instanceof ExcavatorItem excavator && player instanceof ServerPlayerEntity serverPlayer) {
+        if(mainHandItem.getItem() instanceof ExcavatorItem excavator && player instanceof ServerPlayerEntity serverPlayer && !Screen.hasShiftDown()) {
             if(HARVESTED_BLOCKS.contains(pos)) {
                 return true;
             }
