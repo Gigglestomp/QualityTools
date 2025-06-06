@@ -26,7 +26,7 @@ public class AxeUsageEvent implements PlayerBlockBreakEvents.Before{
     public boolean beforeBlockBreak(World world, PlayerEntity player, BlockPos pos, BlockState blockState, @Nullable BlockEntity blockEntity) {
         ItemStack mainHandItem = player.getMainHandStack();
 
-        if(mainHandItem.getItem() instanceof AxeItem axe && player instanceof ServerPlayerEntity serverPlayer && Screen.hasShiftDown() && world.getBlockState(pos).isIn(BlockTags.LOGS)) {
+        if(mainHandItem.getItem() instanceof AxeItem axe && player instanceof ServerPlayerEntity serverPlayer && serverPlayer.isSneaking() && world.getBlockState(pos).isIn(BlockTags.LOGS)) {
             if(HARVESTED_BLOCKS.contains(pos)) {
                 return true;
             }
