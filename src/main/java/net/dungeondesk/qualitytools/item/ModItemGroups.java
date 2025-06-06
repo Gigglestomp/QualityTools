@@ -1,6 +1,7 @@
 package net.dungeondesk.qualitytools.item;
 
 import net.dungeondesk.qualitytools.QualityTools;
+import net.dungeondesk.qualitytools.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -124,6 +125,9 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(Items.IRON_BLOCK))
                     .displayName(Text.translatable("itemgroup.qualitytools.quality_tools_blocks"))
                     .entries((displayContext, entries) -> {
+
+                        entries.add(ModBlocks.BACKPACK);
+
                     }).build());
 
 

@@ -1,9 +1,12 @@
 package net.dungeondesk.qualitytools;
 
 import com.sun.jna.platform.win32.Netapi32Util;
+import net.dungeondesk.qualitytools.block.ModBlocks;
+import net.dungeondesk.qualitytools.block.entity.ModBlockEntities;
 import net.dungeondesk.qualitytools.item.ModItemGroups;
 import net.dungeondesk.qualitytools.item.ModItems;
 import net.dungeondesk.qualitytools.item.custom.HammerItem;
+import net.dungeondesk.qualitytools.screen.ModScreenHandlers;
 import net.dungeondesk.qualitytools.util.AxeUsageEvent;
 import net.dungeondesk.qualitytools.util.ExcavatorUsageEvent;
 import net.dungeondesk.qualitytools.util.HammerUsageEvent;
@@ -33,6 +36,9 @@ public class QualityTools implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModLootTableModifiers.modifyLootTables();
+		ModBlocks.registerModBlocks();
+		ModBlockEntities.registerBlockEntities();
+		ModScreenHandlers.registerScreenHandlers();
 
 //		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> entries.addAfter(Items.STONE_HOE, ModItems.COPPER_SHOVEL));
 //		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> entries.addAfter(ModItems.COPPER_SHOVEL, ModItems.COPPER_PICKAXE));
