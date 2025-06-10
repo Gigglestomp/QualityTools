@@ -118,6 +118,8 @@
   "item.qualitytools.ruby_horse_armor": "Ruby Horse Armor",
   "item.qualitytools.sapphire_horse_armor": "Sapphire Horse Armor",
 
-  "block.qualitytools.backpack": "Backpack"
+  "block.qualitytools.backpack": "Backpack",
+  "item.qualitytools.backpack": "Backpack"
+
 
 }

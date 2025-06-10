@@ -123,12 +123,12 @@ public class QualityTools implements ModInitializer {
 			}
 		});
 
-		ItemTooltipCallback.EVENT.register((itemStack, tooltipContext, tooltipType, list) -> {
+		/*ItemTooltipCallback.EVENT.register((itemStack, tooltipContext, tooltipType, list) -> {
 			if (!itemStack.isOf(Item.fromBlock(ModBlocks.BACKPACK))) {
 				return;
 			}
 			list.add(Text.translatable("tooltip.qualitytools.backpack"));
 
-		});
+		});*/
 	}
 }
