@@ -117,6 +117,7 @@ public class ModItemGroups {
                         entries.add(ModItems.QUARTZ_HORSE_ARMOR);
                         entries.add(ModItems.RUBY_HORSE_ARMOR);
                         entries.add(ModItems.SAPPHIRE_HORSE_ARMOR);
+                        //entries.add(ModItems.BACKPACK);
 
                     }).build());
 

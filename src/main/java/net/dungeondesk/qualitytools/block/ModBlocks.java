@@ -2,12 +2,14 @@ package net.dungeondesk.qualitytools.block;
 
 import net.dungeondesk.qualitytools.QualityTools;
 import net.dungeondesk.qualitytools.block.custom.BackpackBlock;
+import net.dungeondesk.qualitytools.item.custom.BackpackItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -22,10 +24,6 @@ public class ModBlocks {
                             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(QualityTools.MOD_ID, "backpack")))
                             .nonOpaque()));
 
-    private static Block registerBlockWithoutBlockItem(String name, Block block) {
-        return Registry.register(Registries.BLOCK, Identifier.of(QualityTools.MOD_ID, name), block);
-    }
-
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(QualityTools.MOD_ID, name), block);
@@ -33,7 +31,7 @@ public class ModBlocks {
 
     public static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(QualityTools.MOD_ID, name),
-                new BlockItem(block, new Item.Settings()
+                new BackpackItem(block, new Item.Settings()
                         .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(QualityTools.MOD_ID, name))).useBlockPrefixedTranslationKey()));
     }
 

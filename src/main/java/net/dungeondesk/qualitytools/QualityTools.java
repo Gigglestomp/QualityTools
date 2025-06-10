@@ -3,6 +3,7 @@ package net.dungeondesk.qualitytools;
 import com.sun.jna.platform.win32.Netapi32Util;
 import net.dungeondesk.qualitytools.block.ModBlocks;
 import net.dungeondesk.qualitytools.block.entity.ModBlockEntities;
+import net.dungeondesk.qualitytools.component.ModDataComponentTypes;
 import net.dungeondesk.qualitytools.item.ModItemGroups;
 import net.dungeondesk.qualitytools.item.ModItems;
 import net.dungeondesk.qualitytools.item.custom.HammerItem;
@@ -15,12 +16,11 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.item.AxeItem;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.item.*;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.text.Text;
 import org.slf4j.Logger;
@@ -33,6 +33,7 @@ public class QualityTools implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
+		ModDataComponentTypes.registerDataComponentTypes();
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModLootTableModifiers.modifyLootTables();
@@ -122,6 +123,12 @@ public class QualityTools implements ModInitializer {
 			}
 		});
 
+		ItemTooltipCallback.EVENT.register((itemStack, tooltipContext, tooltipType, list) -> {
+			if (!itemStack.isOf(Item.fromBlock(ModBlocks.BACKPACK))) {
+				return;
+			}
+			list.add(Text.translatable("tooltip.qualitytools.backpack"));
 
+		});
 	}
 }

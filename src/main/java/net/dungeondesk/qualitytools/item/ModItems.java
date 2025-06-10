@@ -1,9 +1,11 @@
 package net.dungeondesk.qualitytools.item;
 
 import net.dungeondesk.qualitytools.QualityTools;
+import net.dungeondesk.qualitytools.block.ModBlocks;
 import net.dungeondesk.qualitytools.item.custom.ExcavatorItem;
 import net.dungeondesk.qualitytools.item.custom.HammerItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.Block;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
@@ -427,6 +429,13 @@ public class ModItems {
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(QualityTools.MOD_ID, name), item);
     }
+
+    public static BlockItem registerBlockItem(String name, Block block) {
+        return Registry.register(Registries.ITEM, Identifier.of(QualityTools.MOD_ID, name),
+                new BlockItem(block, new Item.Settings()
+                        .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(QualityTools.MOD_ID,"backpack")))));
+    }
+
 
     public static void registerModItems() {
         QualityTools.LOGGER.info("Registering Mod Items for " + QualityTools.MOD_ID);
